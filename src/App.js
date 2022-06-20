@@ -1,7 +1,12 @@
-import './App.css';
+import "./App.css";
+import Nav from "./components/Nav";
 
 function App() {
-  return <h2>Space Travellers!</h2>;
+  return (
+    <>
+      <Nav />
+    </>
+  );
 }
 
 export default App;
