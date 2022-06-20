@@ -4,8 +4,10 @@ import './Nav.css';
 
 const Nav = () => (
   <nav className="header">
-    <img src={logo} className="logo" />
-    <span>Space Travellers' Hub</span>
+    <span className="nav-logo">
+      <img src={logo} className="logo" alt="logo" />
+      <span className="logo-title">Space Travellers&apos; Hub</span>
+    </span>
     <div className="nav-links">
       <Link to="/rockets">Rockets</Link>
       <Link to="/dragons">Dragons</Link>

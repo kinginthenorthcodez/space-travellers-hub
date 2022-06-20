@@ -11,11 +11,32 @@
 
 .nav-links {
 display: flex;
-gap: 5vw;
+gap: 2vw;
 align-items: center;
+}
+
+.nav-links:nth-child(4){
+  border-left: 2px solid grey;
 }
 
 .nav-links > a {
   text-decoration: none;
   color: blue;
 }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo .logo-title {
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: gray;
+}
+
+.nav-links .active {
+  color: aliceblue;
+}
+
