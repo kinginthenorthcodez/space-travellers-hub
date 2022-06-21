@@ -3,6 +3,7 @@
   gap: 2vw;
   align-items: center;
   color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-links:nth-child(4) {
@@ -14,5 +15,5 @@
 }
 
 .active-nav {
-  color: red;
+  color: #00d7c6;
 }
