@@ -1,18 +1,26 @@
-import { Link } from 'react-router-dom';
-import logo from '../assets/spacelogo.png';
-import './Nav.css';
+import { NavLink } from 'react-router-dom';
+import './css/Nav.css';
 
-const Nav = () => (
-  <nav className="header">
-    <img src={logo} className="logo" />
-    <span>Space Travellers' Hub</span>
+const Nav = () => {
+  const navs = [
+    { id: 1, path: '/rockets', text: 'Rockets' },
+    { id: 2, path: '/dragons', text: 'Dragons' },
+    { id: 1, path: 'missions', text: 'Missions' },
+    { id: 1, path: '/', text: 'My Profile' },
+  ];
+  return (
     <div className="nav-links">
-      <Link to="/rockets">Rockets</Link>
-      <Link to="/dragons">Dragons</Link>
-      <Link to="/missions">missions</Link>
-      <Link to="/">my profile</Link>
+      {navs.map((nav) => (
+        <NavLink
+          className={(navlink) => (navlink.isActive ? 'active-nav' : '')}
+          to={nav.path}
+          key={nav.id}
+        >
+          {nav.text}
+        </NavLink>
+      ))}
     </div>
-  </nav>
-);
+  );
+};
 
 export default Nav;
