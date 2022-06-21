@@ -1,11 +1,11 @@
 .nav-links {
-display: flex;
-gap: 2vw;
-align-items: center;
-color: blue;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  color: blue;
 }
 
-.nav-links:nth-child(4){
+.nav-links:nth-child(4) {
   border-left: 2px solid grey;
 }
 
@@ -16,4 +16,3 @@ color: blue;
 .active-nav {
   color: red;
 }
-
