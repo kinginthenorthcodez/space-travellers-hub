@@ -3,10 +3,10 @@ import './css/Nav.css';
 
 const Nav = () => {
   const navs = [
-    { id: 1, path: '/rockets', text: 'Rockets' },
-    { id: 2, path: '/dragons', text: 'Dragons' },
-    { id: 3, path: 'missions', text: 'Missions' },
-    { id: 4, path: '/', text: 'My Profile' },
+    { id: 1, path: "/", text: "Rockets" },
+    { id: 2, path: "/dragons", text: "Dragons" },
+    { id: 3, path: "missions", text: "Missions" },
+    { id: 4, path: "/My-Profile", text: "My Profile" },
   ];
   return (
     <div className="nav-links">
