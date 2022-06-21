@@ -1,0 +1,19 @@
+.nav-links {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-links:nth-child(4) {
+  border-left: 2px solid grey;
+}
+
+.nav-links > a {
+  text-decoration: none;
+}
+
+.active-nav {
+  color: #00d7c6;
+}
