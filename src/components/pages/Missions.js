@@ -1,4 +1,3 @@
-// import React from 'react';
 import Mission from '../Mission';
 import '../css/Missions.css';
 
