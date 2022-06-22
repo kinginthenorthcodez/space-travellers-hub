@@ -5,7 +5,7 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import showRocket from './rockets/reducer.js';
+import showRocket from './rockets/reducer';
 import dragonsReducer, { fetchDataAPI } from './dragons';
 
 const allReducers = combineReducers({
