@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './css/Missions.css';
 
 const Mission = ({
   name, description, member,
