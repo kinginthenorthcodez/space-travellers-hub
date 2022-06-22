@@ -26,29 +26,31 @@ tbody tr:nth-child(odd) {
 
 /* Mission Component */
 button {
-  border-radius: 5px;
   width: 120px;
-  border: none;
   text-transform: capitalize;
 }
 
 .status {
   font-size: 12px;
   padding: 5px 2px;
+  border-radius: 5px;
 }
 
 .action {
+  border-radius: 5px;
   font-size: 16px;
 }
 
 .nonMember {
   background: #6d757d;
+  border: 1px solid #6d757d;
   color: #fff;
   text-transform: uppercase;
 }
 
 .activeMember {
   background: #18a2b8;
+  border: 1px solid #18a2b8;
   color: #fff;
 }
 
