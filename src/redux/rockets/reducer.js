@@ -4,7 +4,7 @@ const startState = [];
 const showRocket = function reducer(state = startState, action = {}) {
   switch (action.type) {
     case rocketShowed:
-      return action.payload;
+      return [...action.payload];
     default:
       return state;
   }
