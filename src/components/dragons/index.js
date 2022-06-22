@@ -1,37 +1,54 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
-import spaceship from '../../assets/spacex.jpg';
 import './dragon.css';
+import { reserveDragon, canselReserve } from '../../redux/dragons';
 
 const Dragons = () => {
-  const [reserve, setReserve] = useState(false);
+  // const [reserve, setReserve] = useState(false);
+  const dragons = useSelector((state) => state.dragonsReducer);
+  const dispatch = useDispatch();
+  console.log('From the redux store:', dragons);
   return (
     <>
       <div className="dragon-section">
         <hr className="line" />
-        <div className="dragon">
-          <img src={spaceship} alt="dragon-ship" />
-          <div className="dragon-info">
-            <h3 className="dragon-title">SpaceX Dragon cargo spacecraft</h3>
-
-            <p>
-              {reserve ? <Badge bg="info">Reserved</Badge> : ''}
-              Dragon was launched on June 29 on a SpaceX Falcon 9 rocket from
-              Space Launch Complex 40 at Cape Canaveral Air Force Station in
-              Florida, US and arrived at the station on July 2, for the
-              company&apos;s 15th NASA-contracted commercial re-supply mission
-              to the station.
-            </p>
-            <Button
-              variant="primary"
-              className="btn"
-              onClick={() => setReserve(!reserve)}
-            >
-              {reserve ? 'Cancel Reservation' : 'Reserve Dragon'}
-            </Button>
+        {dragons.map((dragon) => (
+          <div className="dragon" key={dragon.id}>
+            <img src={dragon.flickr_images} alt={dragon.name} />
+            <div className="dragon-info">
+              <h3 className="dragon-title">{dragon.name}</h3>
+              {dragon.reserved ? (
+                <>
+                  <p>
+                    <Badge bg="info">Reserved</Badge>
+                    {dragon.description}
+                  </p>
+                </>
+              ) : (
+                <p>{dragon.description}</p>
+              )}
+              {dragon.reserved ? (
+                <Button
+                  variant="primary"
+                  className="btn btn-cancel-reserve"
+                  onClick={() => dispatch(canselReserve(dragon.id))}
+                >
+                  Cancel Reservation
+                </Button>
+              ) : (
+                <Button
+                  variant="primary"
+                  className="btn btn-reserve"
+                  onClick={() => dispatch(reserveDragon(dragon.id))}
+                >
+                  Reserve Dragon
+                </Button>
+              )}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </>
   );

@@ -6,7 +6,7 @@ const Nav = () => {
     { id: 1, path: '/', text: 'Rockets' },
     { id: 2, path: '/dragons', text: 'Dragons' },
     { id: 3, path: 'missions', text: 'Missions' },
-    { id: 4, path: '/My-Profile', text: 'My Profile' },
+    { id: 4, path: '/myprofile', text: 'My Profile' },
   ];
   return (
     <div className="nav-links">

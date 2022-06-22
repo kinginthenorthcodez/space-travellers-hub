@@ -6,8 +6,8 @@ import {
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
-import dragonsReducer from "./dragons";
 import showRocket from "./rockets/reducer";
+import dragonsReducer, { fetchDataAPI } from './dragons';
 
 const allReducers = combineReducers({
   dragonsReducer,
@@ -17,5 +17,5 @@ const store = legacyCreateStore(
   allReducers,
   composeWithDevTools(applyMiddleware(logger, thunk))
 );
-store.dispatch({ type: "ANYTHING" });
+store.dispatch(fetchDataAPI());
 export default store;
