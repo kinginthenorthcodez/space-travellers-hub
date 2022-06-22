@@ -12,7 +12,7 @@ import { getApi } from '../components/rockets/rockets-api';
 
 const allReducers = combineReducers({
   dragonsReducer,
-  rockets : showRocket,
+  rockets: showRocket,
 });
 const store = legacyCreateStore(
   allReducers,
