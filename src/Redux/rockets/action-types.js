@@ -1,1 +1,2 @@
-export const rocketShowed = 'showRocket';
+const rocketShowed = 'showRocket';
+export default rocketShowed;

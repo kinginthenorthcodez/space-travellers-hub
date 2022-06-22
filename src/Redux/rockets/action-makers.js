@@ -1,9 +1,11 @@
-import { getApi } from '../../components/rockets/rockets-api';
-import { rocketShowed } from './action-types';
+import getApi from '../../components/rockets/rockets-api';
+import rocketShowed from './action-types';
 
-export function showRockets() {
+function showRockets() {
   return async (dispatch) => {
     const rockets = await getApi();
     dispatch({ type: rocketShowed, payload: rockets });
   };
 }
+
+export default showRockets;

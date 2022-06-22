@@ -1,5 +1,4 @@
-import { showRockets } from './action-makers';
-import { rocketShowed } from './action-types';
+import rocketShowed from './action-types';
 
 const startState = [];
 const showRocket = function reducer(state = startState, action = {}) {

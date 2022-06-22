@@ -1,6 +1,6 @@
 const api = 'https://api.spacexdata.com/v3/rockets';
 
-export const getApi = async () => {
+const getApi = async () => {
   const response = await fetch(api, { method: 'GET' }).catch(
     (error) => error.message,
   );
@@ -13,3 +13,5 @@ export const getApi = async () => {
   }));
   return rockets;
 };
+
+export default getApi;

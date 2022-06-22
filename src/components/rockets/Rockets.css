@@ -5,12 +5,12 @@
 .rocket-card {
   display: flex;
   gap: 5vw;
-  margin:5vw;
+  margin: 5vw;
 }
 
 .img-container > img {
-  height:35vw;
-  width: 35vw
+  height: 35vw;
+  width: 35vw;
 }
 
 article {
@@ -20,5 +20,5 @@ article {
 }
 
 .width-20vw {
-  width:20vw;
+  width: 20vw;
 }
