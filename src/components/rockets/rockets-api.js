@@ -13,4 +13,3 @@ export const getApi = async () => {
   }));
   return rockets;
 };
-
