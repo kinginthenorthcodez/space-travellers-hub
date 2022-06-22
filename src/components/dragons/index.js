@@ -9,7 +9,6 @@ const Dragons = () => {
   // const [reserve, setReserve] = useState(false);
   const dragons = useSelector((state) => state.dragonsReducer);
   const dispatch = useDispatch();
-  console.log('From the redux store:', dragons);
   return (
     <>
       <div className="dragon-section">

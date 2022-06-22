@@ -56,8 +56,6 @@ export const fetchDataAPI = () => async (dispatch) => {
       wikipedia: dragon.wikipedia,
       reserved: false,
     }));
-    console.log(dragon);
     dispatch(fetchOk(dragon));
   });
-  // console.table(data);
 };

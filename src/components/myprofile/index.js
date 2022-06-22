@@ -8,7 +8,6 @@ const Myprofile = () => {
     (item) => item.reserved,
   );
   const dispatch = useDispatch();
-  console.log('reserved dragons: ', dragons);
   return (
     <>
       <hr className="line" />
