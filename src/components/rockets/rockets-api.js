@@ -1,8 +1,8 @@
-const api = "https://api.spacexdata.com/v3/rockets";
+const api = 'https://api.spacexdata.com/v3/rockets';
 
 export const getApi = async () => {
-  const response = await fetch(api, { method: "GET" }).catch(
-    (error) => error.message
+  const response = await fetch(api, { method: 'GET' }).catch(
+    (error) => error.message,
   );
   const resRead = await response.json();
   const rockets = resRead.map((rocket) => ({
@@ -13,3 +13,4 @@ export const getApi = async () => {
   }));
   return rockets;
 };
+

@@ -1,9 +1,7 @@
-import { getApi } from "../../components/rockets-api";
-import { rocketShowed } from "./action-types";
+import { getApi } from '../../components/rockets/rockets-api';
+import { rocketShowed } from './action-types';
 
-export function showBooks() {
-  return async (dispatch) => {
+export const showRockets =() => async (dispatch) => {
     const rockets = await getApi();
-    dispatch({ type: rocketShowed, payload: rockets });
+     dispatch({ type: rocketShowed, payload: rockets });
   };
-}

@@ -1,1 +1,1 @@
-export const rocketShowed = 'showRocket' 
+export const rocketShowed = 'showRocket';
