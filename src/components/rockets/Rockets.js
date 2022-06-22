@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Rocket from './Rocket';
-import showRockets from '../../redux/rockets/action-makers';
 import './Rockets.css';
+import showRockets from '../../redux/rockets/action-creators';
 
 const RocketExihbit = () => {
   const dispatch = useDispatch();
