@@ -17,4 +17,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
- console.log(store.dispatch(showRockets))

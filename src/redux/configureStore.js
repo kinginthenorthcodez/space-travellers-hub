@@ -8,14 +8,14 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 import showRocket from "./rockets/reducer";
 import dragonsReducer, { fetchDataAPI } from './dragons';
+import { getApi } from "../components/rockets/rockets-api";
 
 const allReducers = combineReducers({
-  dragonsReducer,
   showRocket,
+  dragonsReducer
 });
 const store = legacyCreateStore(
   allReducers,
-  composeWithDevTools(applyMiddleware(logger, thunk))
-);
+  applyMiddleware(logger, thunk));
 store.dispatch(fetchDataAPI());
 export default store;
