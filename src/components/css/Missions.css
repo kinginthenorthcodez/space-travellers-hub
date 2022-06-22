@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.missionsContainer {
+  width: 100vw;
+  overflow: auto;
+}
+
+table {
+  margin: 10px 10%;
+  min-width: 600px;
+}
+
+th,
+td {
+  border: 1px solid #dee2e6;
+  padding: 5px;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+/* Mission Component */
+button {
+  width: 120px;
+  text-transform: capitalize;
+}
+
+.status {
+  font-size: 12px;
+  padding: 5px 2px;
+  border-radius: 5px;
+}
+
+.action {
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.nonMember {
+  background: #6d757d;
+  border: 1px solid #6d757d;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.activeMember {
+  background: #18a2b8;
+  border: 1px solid #18a2b8;
+  color: #fff;
+}
+
+.joinMission {
+  color: #4c5257;
+  border: 1px solid #4c5257;
+  padding: 5px 0;
+}
+
+.leaveMission {
+  padding: 5px 0;
+  border: 1px solid #e15361;
+  color: #e15361;
+}
