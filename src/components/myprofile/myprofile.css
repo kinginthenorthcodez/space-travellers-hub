@@ -64,5 +64,28 @@ hr.line {
 }
 
 .rocket-container {
-  margin-top: 20vw;
+  margin-top: 2vw;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  gap: 20vw;
+  align-items: flex-start;
+}
+
+.rocket-title {
+  font-weight: bold;
+  font-size: 4vw;
+  padding: 1vw;
+  padding-bottom: 0;
+}
+
+.rocket-card-profile {
+  border: solid 1px gray;
+  padding-left: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  width: 35vw;
+  height: 7vw;
 }
