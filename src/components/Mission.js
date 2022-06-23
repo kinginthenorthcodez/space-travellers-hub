@@ -8,14 +8,18 @@ const Mission = ({
     <td>{name}</td>
     <td>{description}</td>
     <td>
-      <button className={`status ${member ? 'activeMember' : 'nonMember'}`} type="button">
-        {member ? 'Active Member' : 'Not a Member'}
-      </button>
+      {
+        member
+          ? <button className="status activeMember" type="button">Active Member</button>
+          : <button className="status nonMember" type="button">Not a Member</button>
+      }
     </td>
     <td>
-      <button className={`action ${member ? 'leaveMission' : 'joinMission'}`} type="button">
-        {member ? 'Leave Mission' : 'Join Mission'}
-      </button>
+      {
+        member
+          ? <button className="action leaveMission" type="button">Leave Mission</button>
+          : <button className="status joinMission" type="button">Join Mission</button>
+      }
     </td>
   </tr>
 );
