@@ -62,3 +62,7 @@ hr.line {
   color: orangered;
   text-align: center;
 }
+
+.rocket-container {
+  margin-top: 20vw;
+}
