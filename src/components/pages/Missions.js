@@ -1,8 +1,9 @@
+import { shallowEqual, useSelector } from 'react-redux';
 import Mission from '../Mission';
 import '../css/Missions.css';
 
 const Missions = () => {
-  const missionsObject = [];
+  const missions = useSelector((state) => state.missions, shallowEqual);
 
   return (
     <div className="missionsContainer">
@@ -16,7 +17,7 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {missionsObject.map((mission) => (
+          {missions.map((mission) => (
             <Mission
               key={mission.id}
               id={mission.id}
