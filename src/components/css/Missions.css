@@ -26,6 +26,11 @@ tbody tr:nth-child(odd) {
 }
 
 /* Mission Component */
+.missionsContainer button:not(:disabled).nonMember,
+.missionsContainer button:not(:disabled).activeMember {
+  cursor: default;
+}
+
 .missionsContainer button {
   width: 120px;
   text-transform: capitalize;
