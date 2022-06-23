@@ -7,6 +7,23 @@ export const Actions = {
 
 const stateInit = [];
 
+const reducer = (state = stateInit, action) => {
+  switch (action.type) {
+    case Actions.LOAD:
+      return [...action.payLoad];
+    case Actions.TOGGLE_JOIN:
+    {
+      const missionRet = state.map((mission) => {
+        if (action.payLoad.id !== mission.id) return { ...mission };
+        return { ...mission, member: !mission.member };
+      });
+      return missionRet;
+    }
+    default:
+      return state;
+  }
+};
+
 export const loadMissions = () => async (dispatch) => {
   const response = await fetch(apiURL());
   const data = await response.json();
@@ -29,3 +46,5 @@ export const loadMissions = () => async (dispatch) => {
 export const toggleJoinMission = (missionId) => (
   { type: Actions.TOGGLE_JOIN, payLoad: { id: missionId } }
 );
+
+export default reducer;
