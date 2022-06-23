@@ -1,12 +1,13 @@
 .header {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5vw;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 10vw;
+  height: 10vw;
+  padding-right: 1vw;
 }
 
 .nav-logo {
@@ -15,7 +16,7 @@
 }
 
 .nav-logo .logo-title {
-  font-size: 28px;
+  font-size: 2.5vw;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   color: gray;
