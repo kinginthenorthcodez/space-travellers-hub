@@ -1,11 +1,11 @@
-import rocketShowed, { rocketBooked } from './action-types';
+import rocketShowed, { rocketBookingHandler } from './action-types';
 
 const startState = [];
 const showRocket = function reducer(state = startState, action = {}) {
   switch (action.type) {
     case rocketShowed:
       return [...state, ...action.payload];
-    case rocketBooked:
+    case rocketBookingHandler:
       return state.map((rocket) => {
         if (rocket.id !== action.payload) {
           return rocket;

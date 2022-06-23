@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 
 const Rocket = ({
-  name, description, img, id, reserved, bookHandler,
+  name, description, img, id, reserved, bookingHandler,
 }) => (
   <div className="rocket-card" id={id}>
     <div className="img-container">
@@ -28,7 +28,8 @@ const Rocket = ({
         <Button
           variant="primary"
           className="btn btn-cancel-reserve width-20vw"
-          // onClick={() => dispatch(canselReserve(Rocket.id))}
+          onClick={() => bookingHandler(id)}
+          id={id}
         >
           Cancel Reservation
         </Button>
@@ -36,7 +37,7 @@ const Rocket = ({
         <Button
           variant="primary"
           className="btn btn-reserve width-20vw"
-          onClick={() => bookHandler(id)}
+          onClick={() => bookingHandler(id)}
           id={id}
         >
           Reserve Rocket
@@ -52,7 +53,7 @@ Rocket.propTypes = {
   img: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   reserved: PropTypes.bool.isRequired,
-  bookHandler: PropTypes.func.isRequired,
+  bookingHandler: PropTypes.func.isRequired,
 };
 
 export default Rocket;
