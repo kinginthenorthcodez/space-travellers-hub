@@ -5,17 +5,18 @@
 }
 
 .missionsContainer {
-  width: 100vw;
+  width: 100%;
   overflow: auto;
 }
 
 table {
-  margin: 10px 10%;
+  margin: 10px 10% 30px 10%;
   min-width: 600px;
 }
 
-th,
-td {
+table,
+.missionsContainer th,
+.missionsContainer td {
   border: 1px solid #dee2e6;
   padding: 5px;
 }
@@ -25,42 +26,47 @@ tbody tr:nth-child(odd) {
 }
 
 /* Mission Component */
-button {
+.missionsContainer button:not(:disabled).nonMember,
+.missionsContainer button:not(:disabled).activeMember {
+  cursor: default;
+}
+
+.missionsContainer button {
   width: 120px;
   text-transform: capitalize;
 }
 
-.status {
+.missionsContainer .status {
   font-size: 12px;
   padding: 5px 2px;
   border-radius: 5px;
 }
 
-.action {
+.missionsContainer .action {
   border-radius: 5px;
   font-size: 16px;
 }
 
-.nonMember {
+.missionsContainer .nonMember {
   background: #6d757d;
   border: 1px solid #6d757d;
   color: #fff;
   text-transform: uppercase;
 }
 
-.activeMember {
+.missionsContainer .activeMember {
   background: #18a2b8;
   border: 1px solid #18a2b8;
   color: #fff;
 }
 
-.joinMission {
+.missionsContainer .joinMission {
   color: #4c5257;
   border: 1px solid #4c5257;
   padding: 5px 0;
 }
 
-.leaveMission {
+.missionsContainer .leaveMission {
   padding: 5px 0;
   border: 1px solid #e15361;
   color: #e15361;
