@@ -4,3 +4,5 @@ export const Actions = {
   LOAD: 'space-travellers-hub/missions/LOAD',
   TOGGLE_JOIN: 'space-travellers-hub/missions/TOGGLE_JOIN',
 };
+
+const stateInit = [];
