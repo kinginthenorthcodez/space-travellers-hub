@@ -27,7 +27,7 @@ const Rocket = ({
       {reserved ? (
         <Button
           variant="primary"
-          className="btn btn-cancel-reserve width-20vw"
+          className="btn btn-cancel-reserve width-20vw back-color-gray"
           onClick={() => bookingHandler(id)}
           id={id}
         >
