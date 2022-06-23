@@ -19,8 +19,17 @@ article {
   justify-content: space-around;
 }
 
+article > h4 {
+  font-size: 5vw;
+}
+
+article > p {
+  font-size: 2vw;
+}
+
 .width-20vw {
-  width: 20vw;
+  width: 25vw;
+  font-size: 2vw;
 }
 
 .back-color-gray {
