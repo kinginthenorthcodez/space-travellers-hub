@@ -6,7 +6,7 @@ import './Rockets.css';
 const RocketExihbit = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
-  const bookHandler = (id) => {
+  const bookingHandler = (id) => {
     dispatch(bookRocket(id));
   };
 
@@ -21,7 +21,7 @@ const RocketExihbit = () => {
             name={rocket.name}
             description={rocket.description}
             img={rocket.img}
-            bookHandler={bookHandler}
+            bookingHandler={bookingHandler}
           />
         ))}
     </div>
