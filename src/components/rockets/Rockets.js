@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-import { bookRocket } from "../../redux/rockets/action-creators";
-import Rocket from "./Rocket";
-import "./Rockets.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { bookRocket } from '../../redux/rockets/action-creators';
+import Rocket from './Rocket';
+import './Rockets.css';
 
 const RocketExihbit = () => {
   const dispatch = useDispatch();
@@ -12,8 +12,8 @@ const RocketExihbit = () => {
 
   return (
     <div className="rocket-container">
-      {rockets &&
-        rockets.map((rocket) => (
+      {rockets
+        && rockets.map((rocket) => (
           <Rocket
             key={rocket.id}
             id={rocket.id}

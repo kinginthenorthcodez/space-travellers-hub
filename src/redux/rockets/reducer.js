@@ -6,12 +6,12 @@ const showRocket = function reducer(state = startState, action = {}) {
     case rocketShowed:
       return [...state, ...action.payload];
     case rocketBooked:
-       return state.map((rocket) => {
-         if (rocket.id !== action.payload) {
-           return rocket;
-         }
-         return { ...rocket, reserved: !rocket.reserved };
-       });  
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: !rocket.reserved };
+      });
     default:
       return state;
   }

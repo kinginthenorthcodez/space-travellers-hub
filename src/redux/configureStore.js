@@ -19,6 +19,5 @@ const store = legacyCreateStore(
 );
 store.dispatch(fetchDataAPI());
 store.dispatch(showRockets());
-;
 
 export default store;

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 
-const Rocket = ({ name, description, img, id, reserved, bookHandler }) => (
+const Rocket = ({
+  name, description, img, id, reserved, bookHandler,
+}) => (
   <div className="rocket-card" id={id}>
     <div className="img-container">
       <img src={img} alt="Rocket" />
@@ -49,6 +51,8 @@ Rocket.propTypes = {
   description: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  bookHandler: PropTypes.func.isRequired,
 };
 
 export default Rocket;
