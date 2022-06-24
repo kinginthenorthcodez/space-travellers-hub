@@ -13,11 +13,10 @@ const reducer = (state = stateInit, action) => {
       return [...action.payLoad];
     case Actions.TOGGLE_JOIN:
     {
-      const missionRet = state.map((mission) => {
+      return state.map((mission) => {
         if (action.payLoad.id !== mission.id) return { ...mission };
         return { ...mission, member: !mission.member };
       });
-      return missionRet;
     }
     default:
       return state;
@@ -33,6 +32,7 @@ export const loadMissions = () => async (dispatch) => {
     name: mission.mission_name,
     description: mission.description,
     member: false,
+    wikipedia: mission.wikipedia,
   }));
 
   if (response.ok) {
