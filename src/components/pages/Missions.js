@@ -1,16 +1,9 @@
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { shallowEqual, useSelector } from 'react-redux';
 import Mission from '../Mission';
-import { loadMissions } from '../../redux/Missions/Missions';
 import '../css/Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions, shallowEqual);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadMissions());
-  }, []);
 
   return (
     <div className="missionsContainer">
