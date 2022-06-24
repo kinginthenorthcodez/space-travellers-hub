@@ -1,4 +1,3 @@
-// import MyDragons from './MyDragons';
 import MyReservedService from './MyReservedService';
 import { toggleJoinMission } from '../../redux/Missions/Missions';
 import { canselReserve } from '../../redux/dragons';
