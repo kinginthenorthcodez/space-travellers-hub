@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-around;
-  padding: 5vw;
+  padding: 1vh 2vw;
 }
 
 .logo {

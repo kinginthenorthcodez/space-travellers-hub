@@ -13,6 +13,28 @@
   width: 30vw;
 }
 
+@media only screen and (max-width: 540px) {
+  .rocket-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container > img {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .img-container {
+    justify-self: center;
+  }
+
+  article {
+    padding-left: 6vw;
+  }
+}
+
 article {
   display: flex;
   flex-direction: column;
