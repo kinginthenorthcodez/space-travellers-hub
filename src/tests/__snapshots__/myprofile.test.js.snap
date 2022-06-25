@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Myprofile snapshot should render myprofile correctly 1`] = `
+<DocumentFragment>
+  <hr
+    class="line"
+  />
+  <div
+    class="myProfileContainer"
+  >
+    <div
+      class="profileGroupContainer"
+    >
+      <h3
+        class="profileHeader"
+      >
+        My Missions
+      </h3>
+      <div
+        class="profileGroup"
+      >
+        <p
+          class="noEntry"
+        >
+          No missions reserved
+        </p>
+      </div>
+    </div>
+    <div
+      class="profileGroupContainer"
+    >
+      <h3
+        class="profileHeader"
+      >
+        My Rockets
+      </h3>
+      <div
+        class="profileGroup"
+      >
+        <p
+          class="noEntry"
+        >
+          No rockets reserved
+        </p>
+      </div>
+    </div>
+    <div
+      class="profileGroupContainer"
+    >
+      <h3
+        class="profileHeader"
+      >
+        My Dragons
+      </h3>
+      <div
+        class="profileGroup"
+      >
+        <p
+          class="noEntry"
+        >
+          No dragons reserved
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

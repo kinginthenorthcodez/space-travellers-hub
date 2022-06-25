@@ -1,0 +1,61 @@
+.rocket-container {
+  border-top: solid 1px lightgray;
+}
+
+.rocket-card {
+  display: flex;
+  gap: 5vw;
+  margin: 5vw;
+}
+
+.img-container > img {
+  height: 30vw;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 540px) {
+  .rocket-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container > img {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .img-container {
+    justify-self: center;
+  }
+
+  article {
+    padding-left: 6vw;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+article > h4 {
+  font-size: 5vw;
+}
+
+article > p {
+  font-size: 2vw;
+}
+
+.width-20vw {
+  width: 25vw;
+  font-size: 2vw;
+}
+
+.back-color-gray {
+  background-color: lightgray;
+  color: black;
+  opacity: 0.5;
+}

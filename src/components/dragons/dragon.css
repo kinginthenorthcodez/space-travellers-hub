@@ -1,0 +1,51 @@
+.dragon-section {
+  width: 100%;
+  padding: 10px;
+}
+
+.dragon-section hr.line {
+  border: 2px solid grey;
+}
+
+.dragon-section .dragon {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  gap: 15px;
+}
+
+.dragon img {
+  width: 30%;
+}
+
+@media only screen and (max-width: 540px) {
+  .dragon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dragon img {
+    width: 80%;
+  }
+}
+
+.dragon .dragon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dragon-info .dragon-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.dragon-info p {
+  padding: 10px;
+}
+
+.dragon-info .btn {
+  width: 180px;
+  margin-left: 5px;
+}
