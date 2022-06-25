@@ -7,12 +7,6 @@ import {
   fetchDataAPI,
   reserveDragon,
   canselReserve,
-} from "../../redux/dragons";
-
-const Dragons = () => {
-  // const [reserve, setReserve] = useState(false);
-  const dispatch = useDispatch();
-  useEffect(() => {
     dispatch(fetchDataAPI());
   }, []);
   const dragons = useSelector((state) => state.dragonsReducer);
@@ -20,13 +14,7 @@ const Dragons = () => {
     <>
       <div className="dragon-section">
         <hr className="line" />
-        {dragons.map((dragon) => (
           <div className="dragon" key={dragon.id}>
-            <img src={dragon.flickr_images} alt={dragon.name} />
-            <div className="dragon-info">
-              <h3 className="dragon-title">{dragon.name}</h3>
-              {dragon.reserved ? (
-                <>
                   <p>
                     <Badge bg="info">Reserved</Badge>
                     {dragon.description}
