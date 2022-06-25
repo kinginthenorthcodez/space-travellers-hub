@@ -6,12 +6,12 @@ import setupStore from './configureStore';
 describe('Test rockets in the MyProfile components', () => {
   test('The profile page renders correctly', () => {
     const store = setupStore(false);
-    const page = render(
+    const {asFragment} = render(
       <Provider store={store}>
         <Myprofile />
       </Provider>,
     );
-    expect(page).toMatchSnapshot();
+    expect(asFragment(<Myprofile />)).toMatchSnapshot();
   });
 
   test('Shows the rocket reserved in the profile page', () => {
