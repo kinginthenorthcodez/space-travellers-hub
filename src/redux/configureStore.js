@@ -6,21 +6,14 @@ import {
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import showRocket from './rockets/reducer';
-import dragonsReducer, { fetchDataAPI } from './dragons';
-import missions, { loadMissions } from './Missions/Missions';
+import dragonsReducer from './dragons';
 import showRockets from './rockets/action-creators';
 
 const allReducers = combineReducers({
   dragonsReducer,
-  missions,
   rockets: showRocket,
 });
-const store = legacyCreateStore(
-  allReducers,
-  applyMiddleware(logger, thunk),
-);
-store.dispatch(fetchDataAPI());
+const store = legacyCreateStore(allReducers, applyMiddleware(logger, thunk));
 store.dispatch(showRockets());
-store.dispatch(loadMissions());
 
 export default store;

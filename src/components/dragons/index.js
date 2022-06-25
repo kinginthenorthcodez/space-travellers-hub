@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
+import {
+  fetchDataAPI,
+  reserveDragon,
+  canselReserve,
+} from '../../redux/dragons';
 import './dragon.css';
-import { reserveDragon, canselReserve } from '../../redux/dragons';
 
 const Dragons = () => {
   // const [reserve, setReserve] = useState(false);
-  const dragons = useSelector((state) => state.dragonsReducer);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDataAPI());
+  }, []);
+
+  const dragons = useSelector((state) => state.dragonsReducer);
+
   return (
     <>
       <div className="dragon-section">
