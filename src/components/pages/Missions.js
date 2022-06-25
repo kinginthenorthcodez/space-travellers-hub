@@ -1,9 +1,8 @@
-import { shallowEqual, useSelector, useDispatch } from "react-redux";
-import React, { useEffect } from "react";
+import { shallowEqual, useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
 import Mission from '../Mission';
-import { loadMissions } from "../../redux/Missions/Missions";
+import { loadMissions } from '../../redux/Missions/Missions';
 import '../css/Missions.css';
-
 
 const Missions = () => {
   const dispatch = useDispatch();

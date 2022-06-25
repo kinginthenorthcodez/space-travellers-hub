@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
-import "./dragon.css";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+import './dragon.css';
 import {
   fetchDataAPI,
   reserveDragon,
   canselReserve,
-} from "../../redux/dragons";
+} from '../../redux/dragons';
 
 const Dragons = () => {
   // const [reserve, setReserve] = useState(false);
